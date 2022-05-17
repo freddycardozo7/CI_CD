@@ -1,4 +1,5 @@
-FROM ubuntu:bionic
+ARG codename=""
+FROM ubuntu:$codename
 
 # Update Ubuntu packages
 RUN apt-get update
