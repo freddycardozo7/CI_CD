@@ -1,2 +1,2 @@
-# CI_CD
-**Project related to CI/CD tools such as docker**
+# Docker
+**Project related to varios Docker images for daily usage**
