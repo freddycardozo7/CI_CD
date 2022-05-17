@@ -1,11 +1,11 @@
 # Build arg variable 'p4clientspec' to store the name of the perforce clientspec   
 ARG p4clientspec = ''
-# Build arg variable 'p4server' to store the name of the perforce clientspec   
+# Build arg variable 'p4server' to store the name of the perforce server   
 ARG p4server = ''
-# Build arg variable 'p4port' to store the name of the perforce clientspec   
+# Build arg variable 'p4port' to store the name of the perforce port   
 ARG p4port = ''
 # Build arg variable 'p4ticket' to store the location of '.p4tickets' file    
-ARG p4port = ''
+ARG p4tickets = ''
 # Build arg variable 'p4root' to store the location of local P4 workspace    
 ARG p4root = ''
 
@@ -22,7 +22,7 @@ FROM ubuntu:$codename
 
 #Add the user 
 RUN useradd -m $username
-ADD ./$p4tickets /home/$username/.p4tickets
+ADD $p4tickets /home/$username/.p4tickets
 
 # Set Environment variable P4USER to the username 
 ENV P4USER=$username 
